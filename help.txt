@@ -1,0 +1,71 @@
+Available commands:
+    help := show information about available commands and their arguments
+ 
+    quit := exit program
+
+
+
+    save_json <directory> <filename> := save as json file 
+
+    read_json <filepath> := read state from a given json file
+
+    save_image <directory> <filename> <extension> := save as image of given extension
+
+    curves_info := print info about all curves, including id, type, visibility, color, width, control points
+
+
+
+    info <curve_id> := print info about given curve including id, visibility, color, width, control points
+
+    new_curve <starting_point> [-c=<color>] [-w=<width_px>] := create new curve with start in the given point
+
+    remove_curve <curve_id> := remove given curve
+
+
+
+    add_point <curve_id> <coords> [index] := add a control point to an existing curve, if given index, 
+        insert point at given index, otherwise insert at the end
+
+    move_point <curve_id> <point_id> <new_coords> := move existing control point to a given position
+
+    remove_point <curve_id> <point_id> := remove given control point from the curve
+
+    swap_points <point_id_1> <point_id_2> := swap values of two control points
+
+
+
+    move_curve <curve_id> <vector_coords> := move curve by a given vector
+
+    reverse_order <curve_id> := reverse order of control points in a given curve
+
+    scale <curve_id> <value> [index] := scale curve by a given value, if given index use that control point
+        as a stationary point, otherwise use starting point as stationary
+
+    rotate <curve_id> <angle> [-units=<deg|rad>] [-id=<index>]:= rotate curve by a given angle, by default angle assumed
+        to be in radians, unless specified (deg - degrees, rad - radians), if given index, use that
+        point as stationary, otherwise use starting point as stationary
+
+    append <curve_id_1> <curve_id_2> := append curve of the same type to a given curve
+
+
+
+    set_color <curve_id> <new_color> := set color of the curve to a given value
+
+    set_width <curve_id> <new_value> := set width of the curve to a given value
+
+
+
+    show_curve <curve_id> := make given curve visible
+
+    hide_curve <curve_id> := hide given curve
+
+    show_points <curve_id> := make control points of given curve visible
+
+    hide_points <curve_id> := hide control points of a curve
+
+    show_conv_hull <curve_id> := show convex hull of a given curve
+
+    hide_conv_hull <curve_id> := hide convex hull of a given curve
+
+
+    
